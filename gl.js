@@ -29,7 +29,7 @@ class WEBGL{
     }
 
     Draw2d(){
-        alert('2d')
+        alert('2dg')
     }
     constructor(){
         const canvas = document.querySelector("#canvas-view");
