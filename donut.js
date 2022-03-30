@@ -1,7 +1,7 @@
 (function() {
     var _onload = function() {
       var pretag = document.getElementById('d');
-      var canvastag = document.getElementById('canvas-view');
+      var canvastag = document.getElementById('canvas-donut');
     
       var tmr1 = undefined, tmr2 = undefined;
       var A=1, B=1;
@@ -56,7 +56,6 @@
       var K1 = 150;
       var K2 = 5;
       var canvasframe=function() {
-        console.log("sadsad")
         var ctx = canvastag.getContext('2d');
         ctx.fillStyle='#000';
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -105,12 +104,19 @@
       canvasframe();
     }
 
-    window.addEventListener("keydown", function(event) {
-        anim2()
+    window.addEventListener("", function(event) {
+      
+      // if(event.key == 'c'){
+      // }else if(event.key == 'd'){
+
+      // }
     });
 
     if(document.all)
       window.attachEvent('onload',_onload);
     else
-      window.addEventListener("load",_onload,false);
+      window.addEventListener("load",()=>{_onload()
+        anim2()
+        anim1()
+        },false);
     })();
